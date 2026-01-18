@@ -1,0 +1,528 @@
+/* Variables & Theme */
+:root {
+    --primary-green: #27ae60;
+    --highlight-text: #EC6928;
+    --dark-bg: #061621;
+    --darker-bg: #040d14;
+    --soft-white: #f8f9fa;
+    --text-muted: #a0a0a0;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Typography & Layout */
+.bg-dark-deep {
+    background-color: var(--dark-bg);
+}
+
+.text-success {
+    color: var(--primary-green) !important;
+}
+
+.btn-success {
+    background-color: var(--primary-green);
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #219150;
+    transform: translateY(-3px);
+}
+
+/* Topbar */
+.topbar {
+    background: var(--darker-bg);
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.topbar a {
+    text-decoration: none;
+    color: #fff;
+    transition: var(--transition);
+}
+
+.topbar a:hover {
+    color: var(--primary-green);
+}
+
+.topbar-right a {
+    margin-left: 15px;
+}
+
+
+/* Navigation Section CSS */
+/* Navigation */
+.navbar-brand img {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    color: #333 !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-green) !important;
+}
+
+.btn-quote {
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-quote i {
+    margin-left: 5px;
+}
+
+.btn-quote:hover {
+    background: var(--primary-green);
+    color: #fff;
+}
+
+/* Parent button container */
+.dropdown-btn {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    /* Button ke theek neeche */
+    left: 0;
+    /* 500px ko hata kar 0 kiya taaki button ke alignment mein rahe */
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    /* Professional shadow */
+    display: none;
+    z-index: 1000;
+    padding: 10px 0;
+    border-radius: 8px;
+    border-top: 3px solid #27ae60;
+    /* Brand green line */
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown a {
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.dropdown a:hover {
+    color: #27ae60;
+    background-color: #f8f9fa;
+    padding-left: 25px;
+    /* Subtle slide effect */
+}
+
+/* Show on hover */
+.dropdown-btn:hover .dropdown {
+    display: block;
+    animation: fadeIn 0.3s ease;
+    /* Smooth entrance */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BANNER SLIDER */
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* BANNER IMAGE */
+.banner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* ACTIVE IMAGE */
+.banner.active {
+    opacity: 1;
+}
+
+
+/* BUTTONS */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 32px;
+    padding: 10px 16px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .banner-slider {
+        height: 30vh;
+    }
+
+    .welcom-img {
+        display: none;
+    }
+}
+
+
+/* Welcome Section */
+.exp-badge {
+    position: absolute;
+    top: 41px;
+    left: -73px;
+    background: var(--primary-green);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
+}
+
+.highlight-text {
+    color: var(--highlight-text);
+    font-size: 35px;
+}
+
+
+.product-sec {
+    background: linear-gradient(to bottom, #141C2E, #135157);
+}
+
+
+
+/* Product Cards */
+.product-card {
+    background: #0a1f2e;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-green);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.badge-new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-green);
+    color: white;
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+
+/* Counter Parallax */
+.counter-parallax {
+    background: linear-gradient(rgba(6, 22, 33, 0.8), rgba(6, 22, 33, 0.8)),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* Inquiry Section */
+.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-green);
+    color: #fff;
+    box-shadow: none;
+}
+
+.whatsapp-float-card {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+.faq-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-title {
+    font-weight: 600;
+    color: #0c2b3a;
+}
+
+.faq-title span {
+    color: #16a34a;
+}
+
+.faq-image {
+    max-width: 90%;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Accordion customization */
+.accordion-item {
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-button {
+    font-weight: 500;
+    color: #0c2b3a;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #eaf6ef;
+    color: #16a34a;
+}
+
+.accordion-body {
+    font-size: 14.5px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .faq-title {
+        text-align: center;
+    }
+}
+
+
+/* Scroll Reveal Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-green);
+    padding-left: 5px;
+}
+
+.footer-logo {
+    width: 70%;
+    height: 68px;
+}
+
+#backToTop {
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+/* Modal container */
+.modal-content {
+    background: var(--dark-bg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+    font-weight: 600;
+    color: var(--highlight-text);
+}
+
+/* Close button */
+.btn-close {
+    filter: invert(1);
+}
+
+/* Form labels */
+.modal .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+/* Inputs & textarea */
+.modal .form-control {
+    background: var(--darker-bg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: all 0.3s ease;
+}
+
+.modal .form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Focus effect */
+.modal .form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.25);
+    background: var(--darker-bg);
+}
+
+/* Submit button */
+.modal .btn-quote {
+    background: var(--primary-green);
+    color: #fff;
+    border-radius: 30px;
+    padding: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-quote:hover {
+    background: #1e9e54;
+    transform: translateY(-2px);
+}
+
+/* Highlight small text */
+.modal small {
+    color: var(--highlight-text);
+}
+
+/* Modal animation */
+.modal.fade .modal-dialog {
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+    .hero-wrapper {
+        height: 70vh;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .whatsapp-float-card {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+    }
+} */
