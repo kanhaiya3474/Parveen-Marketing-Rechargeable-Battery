@@ -5,7 +5,7 @@
     --dark-bg: #061621;
     --darker-bg: #040d14;
     --soft-white: #f8f9fa;
-    --text-muted: #a0a0a0;
+    --text-muted: #c8c8c8;
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -338,7 +338,23 @@ body {
     transform: translateY(0);
 }
 
+.mission-box,
+.overview-box {
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover,
+.overview-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
 /* Footer */
+
+footer {
+    background-color: darkslategrey;
+}
+
 .footer-links li {
     margin-bottom: 12px;
 }
