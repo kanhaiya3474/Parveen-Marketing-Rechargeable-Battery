@@ -95,70 +95,7 @@ body {
     color: #fff;
 }
 
-/* Parent button container */
-.dropdown-btn {
-    position: relative;
-    display: inline-block;
-}
 
-/* Dropdown menu styling */
-.dropdown {
-    position: absolute;
-    top: 100%;
-    /* Button ke theek neeche */
-    left: 0;
-    /* 500px ko hata kar 0 kiya taaki button ke alignment mein rahe */
-    background-color: #ffffff;
-    min-width: 220px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    /* Professional shadow */
-    display: none;
-    z-index: 1000;
-    padding: 10px 0;
-    border-radius: 8px;
-    border-top: 3px solid #27ae60;
-    /* Brand green line */
-}
-
-.dropdown li {
-    list-style: none;
-}
-
-.dropdown a {
-    padding: 12px 20px;
-    display: block;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-/* Hover effects */
-.dropdown a:hover {
-    color: #27ae60;
-    background-color: #f8f9fa;
-    padding-left: 25px;
-    /* Subtle slide effect */
-}
-
-/* Show on hover */
-.dropdown-btn:hover .dropdown {
-    display: block;
-    animation: fadeIn 0.3s ease;
-    /* Smooth entrance */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* BANNER SLIDER */
 .banner-slider {
@@ -191,17 +128,17 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    background: transparent;
     color: #fff;
     border: none;
     font-size: 32px;
-    padding: 10px 16px;
+    padding: 5px 5px;
     cursor: pointer;
     z-index: 2;
 }
 
 .slider-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.263);
 }
 
 .prev {
@@ -215,7 +152,7 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .banner-slider {
-        height: 30vh;
+        height: 20vh;
     }
 
     .welcom-img {
@@ -248,7 +185,9 @@ body {
     background: linear-gradient(to bottom, #141C2E, #135157);
 }
 
-
+.product-row {
+    margin-bottom: 20px;
+}
 
 /* Product Cards */
 .product-card {
@@ -508,6 +447,23 @@ body {
 
 .modal.show .modal-dialog {
     transform: scale(1);
+}
+
+
+.about-us {
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-highlight {
+    color: #EC6928;
+    font-weight: 600;
+}
+
+.about-us p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 /* Responsive adjustments */
